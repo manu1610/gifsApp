@@ -5,8 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:href": "ng build --base-href ./",
+    "build:github": "npm run build:href && npm run copy:dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "copy:dist": "copyfiles dist/gifs-app/browser/* ./docs -f",
     "serve:ssr:gifs-app": "node dist/gifs-app/server/server.mjs"
   },
   "private": true,
